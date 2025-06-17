@@ -8,6 +8,11 @@ use App\Http\Controllers\VehiculoController;
 use Faker\Guesser\Name;
 use Illuminate\Support\Facades\Route;
 
+// Ruta principal que redirige a vehículos
+Route::get('/', function () {
+    return redirect()->route('vehiculos.index');
+});
+
 // CREA LAS RUTAS
 
 // mostramos vistas vehiculos
